@@ -1,5 +1,5 @@
-# tp_idw
-trabajo practico introduccion a desarrollo web uner
+# TRABAJO INTEGRADOR fINAL
+trabajo practico introduccion a desarrollo web uner 2025
 Integrantes:
 - González, Natalia
 - Villalva, Brian Noel
