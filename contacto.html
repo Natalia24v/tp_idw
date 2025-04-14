@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>contacto</title>
+</head>
+<body>
+    <div>
+        <nav>
+            <div class="navbar">
+                <img src="assets/img/logo.png" alt="Logo"  class="logo">
+                <div class="aContent">
+                <a class="aNav" href="./index.html">Inicio</a>
+                <a class="aNav" href="">Institucional</a>
+                <a class="aNav" href="./contacto.html">Contacto</a>
+                </div>
+              </div>
+        </nav>
+    </div>
+    <header>
+        <h1>IDW S.A - Reserva de salones de eventos-</h1>
+    </header>
+    <section>
+        <h2>Reservá tu salón</h2>
+        <form class="formulario">
+          <label for="nombre">Nombre completo:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+      
+          <label for="email">Correo electrónico:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+      
+          <label for="telefono">Teléfono de contacto:</label><br>
+          <input type="tel" id="telefono" name="telefono"><br><br>
+      
+          <label for="fecha">Fecha del evento:</label><br>
+          <input type="date" id="fecha" name="fecha" required><br><br>
+      
+          <label for="salon">Salón a reservar:</label><br>
+          <select id="salon" name="salon" required>
+            <option value="">Seleccione un salón</option>
+            <option value="salon1">Salón 1</option>
+            <option value="salon2">Salón 2</option>
+            <option value="salon3">Salón 3</option>
+            <option value="salon4">Salón 4</option>
+          </select><br><br>
+      
+          <label for="mensaje">Mensaje o consulta:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea><br><br>
+      
+          <input type="submit" value="Enviar solicitud">
+        </form>
+      </section>
+</body>
+</html>
