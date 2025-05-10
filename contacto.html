@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>contacto</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
     <header>
         <h1>IDW S.A - Reserva de salones de eventos-</h1>
     </header>
-    <section>
-        <h2>Reservá tu salón</h2>
+    <main class="container my-5">
+        <h2 class="text-danger mb-4">Reservá tu salón</h2>
         <form class="formulario">
           <label for="nombre">Nombre completo:</label><br>
           <input type="text" id="nombre" name="nombre" required><br><br>
@@ -49,8 +50,36 @@
           <label for="mensaje">Mensaje o consulta:</label><br>
           <textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea><br><br>
       
-          <input type="submit" value="Enviar solicitud">
+          <input type="submit" class="btn btn-primary" value="Enviar solicitud">
         </form>
-      </section>
+    </main>
+ <footer class="bg-dark text-white mt-5">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>IDW S.A.</h5>
+        <p>Reserva de salones de eventos infantiles. Hacemos tu celebración inolvidable.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+          <li><a href="institucional.html" class="text-white text-decoration-none">Institucional</a></li>
+          <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contacto</h5>
+        <p>Email: info@idwsa.com</p>
+        <p>Tel: +54 341 1234567</p>
+        <p>Dirección: Av. Siempreviva 123, Paraná, Entre Ríos</p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-secondary text-center py-2">
+    <small>© 2025 IDW S.A. - Todos los derechos reservados</small>
+  </div>
+</footer>
+
 </body>
 </html>
