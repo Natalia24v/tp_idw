@@ -21,35 +21,41 @@
         </nav>
     </div>
     <header>
-        <h1>IDW S.A - Reserva de salones de eventos-</h1>
+        <h1 class="text-center text-primary my-4">IDW S.A - Reserva de salones de eventos-</h1>
     </header>
     <main class="container my-5">
         <h2 class="text-danger mb-4">Reservá tu salón</h2>
-        <form class="formulario">
-          <label for="nombre">Nombre completo:</label><br>
-          <input type="text" id="nombre" name="nombre" required><br><br>
-      
-          <label for="email">Correo electrónico:</label><br>
-          <input type="email" id="email" name="email" required><br><br>
-      
-          <label for="telefono">Teléfono de contacto:</label><br>
-          <input type="tel" id="telefono" name="telefono"><br><br>
-      
-          <label for="fecha">Fecha del evento:</label><br>
-          <input type="date" id="fecha" name="fecha" required><br><br>
-      
-          <label for="salon">Salón a reservar:</label><br>
-          <select id="salon" name="salon" required>
-            <option value="">Seleccione un salón</option>
-            <option value="salon1">Salón 1</option>
-            <option value="salon2">Salón 2</option>
-            <option value="salon3">Salón 3</option>
-            <option value="salon4">Salón 4</option>
-          </select><br><br>
-      
-          <label for="mensaje">Mensaje o consulta:</label><br>
-          <textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea><br><br>
-      
+        <form class="border p-4 rounded bg-light">
+          <div class="mb-3">
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+          </div>
+          <div class="mb-3">      
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+          </div>
+          <div class="mb-3"> 
+            <label for="telefono">Teléfono de contacto:</label><br>
+            <input type="tel" id="telefono" name="telefono"><br><br>
+          </div>
+          <div class="mb-3"> 
+            <label for="fecha">Fecha del evento:</label><br>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+          </div>
+          <div class="mb-3"> 
+            <label for="salon">Salón a reservar:</label><br>
+            <select id="salon" name="salon" required>
+              <option value="">Seleccione un salón</option>
+              <option value="salon1">Salón 1</option>
+              <option value="salon2">Salón 2</option>
+              <option value="salon3">Salón 3</option>
+              <option value="salon4">Salón 4</option>
+            </select><br><br>
+          </div>
+          <div class="mb-3"> 
+            <label for="mensaje">Mensaje o consulta:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea><br><br>
+          </div>
           <input type="submit" class="btn btn-primary" value="Enviar solicitud">
         </form>
     </main>
