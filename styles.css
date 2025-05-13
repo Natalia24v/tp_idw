@@ -66,17 +66,9 @@
     color: black;
   }
   .formulario { 
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
     border-radius: 15px;
   }
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-  }
+  
   input, textarea, select {
     width: 100%;
     padding: 10px;
@@ -138,4 +130,24 @@
   main ul li {
     list-style-type: disc;
     margin-bottom: 10px;
+  }
+  .card-text {
+    column-count: 1;
+  }
+  footer {
+    color:#fff;
+    background-color: #6b21a8;
+  }
+  footer a {
+    color:#fff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color:#33918c;
+    text-decoration: underline;
+  }
+  footer p {
+    column-count: 1;
+    color:#fff;
+    font-size: 1rem;
   }
