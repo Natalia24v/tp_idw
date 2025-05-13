@@ -27,12 +27,7 @@
     padding: 10px 20px;
   }
   
-  .aNav {
-    text-decoration: none;
-    color: rgb(255, 2, 108);
-    font-weight: bold;
-    padding: 10px;
-  }
+
   
   .imgContent {
     display: flex;
@@ -151,3 +146,15 @@
     color:#fff;
     font-size: 1rem;
   }
+
+.custom-navbar {
+  background-color: #6B21A8; 
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: white; 
+  font-size: 24px;
+  font-weight: bold;
+
+}
