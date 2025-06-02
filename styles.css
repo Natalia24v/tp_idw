@@ -10,9 +10,9 @@
     background-size: cover;         /* Hace que la imagen cubra toda la pantalla */
     background-position: center;    /* Centra la imagen */
     background-repeat: no-repeat;   /* Evita que se repita */
-    margin: 0;
-    padding: 0;
     font-family: sans-serif;
+    font-size: 16px;
+    overflow: scroll;
   }
   
   .logo {
@@ -37,19 +37,22 @@
   }
 
   img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
+  
 
   h1 {
     color: rgb(43, 117, 255);
     padding: 20px;
     text-align: center;
+    font-size: 2.5rem;
   }
   h2 {
     color: orangered;
     padding: 50px;
+    font-size: 1.8rem;
   }
   p {
     column-count: 2;
@@ -102,7 +105,7 @@
   background-color: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 4px 20 px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
   main section {
     margin-bottom: 40px;
@@ -156,5 +159,89 @@
   color: white; 
   font-size: 24px;
   font-weight: bold;
-
 }
+
+/* --- Media Queries para pantallas medianas (tablets y laptops pequeñas) --- */
+@media (min-width: 768px) { 
+  h1 {
+      font-size: 3rem; 
+  }
+  h2 {
+      padding: 30px;
+      font-size: 2rem; 
+  }
+  p {
+      width: 85%; 
+      margin: 30px auto;
+      font-size: 1.2rem; 
+  }
+
+  main {
+      margin: 30px auto;
+      padding: 30px;
+  }
+  main h2 {
+      font-size: 2rem; 
+      margin-bottom: 15px;
+  }
+  main p, main li {
+      font-size: 1.2rem;
+  }
+  main ul {
+      padding-left: 60px; 
+  }
+}
+
+
+/* --- Media Queries para pantallas grandes (desktops, laptops grandes) --- */
+@media (min-width: 992px) { 
+  h1 {
+      font-size: 3.5rem; 
+  }
+  h2 {
+      padding: 40px;
+      font-size: 2.2rem;
+  }
+  p {
+      column-count: 2; 
+      text-align: justify; 
+      width: 80%;
+      margin: 40px auto;
+      font-size: 1.3rem; 
+  }
+
+  main {
+      margin: 40px auto;
+      padding: 40px;
+  }
+  main h2 {
+      font-size: 2.2rem;
+  }
+  main p, main li {
+      font-size: 1.3rem;
+  }
+  main ul {
+      padding-left: 110px; /* Volver al padding original para listas */
+  }
+}
+
+/* --- Media Query para pantallas muy grandes (4K y superiores) --- */
+@media (min-width: 1920px) { 
+  h1 {
+      font-size: 4.5rem;
+      padding: 30px;
+  }
+  h2 {
+      font-size: 3rem;
+      padding: 60px;
+  }
+  p {
+      font-size: 1.8rem; 
+      line-height: 1.8; 
+  }
+
+  main p, main li {
+      font-size: 1.5rem; 
+  }
+}
+
