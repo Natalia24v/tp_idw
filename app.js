@@ -8,8 +8,12 @@ function initializeLocalStorage() {
     }
 }
 
-// Llama a esta función cuando la página se carga
-document.addEventListener('DOMContentLoaded', initializeLocalStorage);
+document.addEventListener('DOMContentLoaded', () => {
+  inicializarSalones(); 
+  initializeLocalStorage();
+});
+
+
 
 /*/ Obtener todos los salones del LocalStorage
 function obtenerSalones() {
@@ -63,6 +67,21 @@ function borrarSalon(id) {
     return salones.length < initialLength; // True si se eliminó, false si no se encontró
 }*/
 
+/* Función para mensaje de alerta */
+const mensaje = document.getElementById("mensaje");
+
+if (mensaje) {
+  mensaje.innerHTML = `
+    <div class="alert alert-success" role="alert">
+      Salón ${id ? 'editado' : 'creado'} correctamente.
+    </div>
+  `;
+  setTimeout(() => mensaje.innerHTML = "", 3000);
+}
+
+
+
+
 const form = document.getElementById("formSalon");
     const tablaBody = document.querySelector("#tablaSalones tbody");
 
@@ -79,8 +98,8 @@ const form = document.getElementById("formSalon");
           <td>${salon.nombre}</td>
           <td>${salon.descripcion}</td>
           <td>
-            <button class="btn btn-sm btn-primary" onclick="editarSalon(${salon.id})">Editar</button>
-            <button class="btn btn-sm btn-danger" onclick="eliminarSalon(${salon.id})">Eliminar</button>
+            <button class="btn btn-sm btn-primary" onclick="editarSalon('${salon.id}')">Editar</button>
+            <button class="btn btn-sm btn-danger" onclick="eliminarSalon('${salon.id}')">Eliminar</button>
           </td>
         `;
         tablaBody.appendChild(fila);
@@ -88,7 +107,7 @@ const form = document.getElementById("formSalon");
     };
 
     window.editarSalon = (id) => {
-      const salon = obtenerSalones().find(s => s.id === id);
+      const salon = obtenerSalones().find(s => String(s.id) === string(id));
       document.getElementById("salonId").value = salon.id;
       document.getElementById("nombre").value = salon.nombre;
       document.getElementById("descripcion").value = salon.descripcion;
@@ -96,7 +115,7 @@ const form = document.getElementById("formSalon");
     };
 
     window.eliminarSalon = (id) => {
-      const salones = obtenerSalones().filter(s => s.id !== id);
+      const salones = obtenerSalones().filter(s => String(s.id) !== String(id));
       guardarSalones(salones);
       renderTabla();
     };
@@ -112,7 +131,7 @@ const form = document.getElementById("formSalon");
 
       if (id) {
         // Editar
-        salones = salones.map(salon => salon.id == id ? { id: Number(id), nombre, descripcion, imagen } : salon);
+        salones = salones.map(salon => String(salon.id) ==string(id) ? { id: salon(id), nombre, descripcion, imagen } : salon);
       } else {
         // Crear
         const nuevoSalon = { id: Date.now(), nombre, descripcion, imagen };

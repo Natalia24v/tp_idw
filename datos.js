@@ -1,11 +1,10 @@
-// data.js
 export const inicializarSalones = () => {
   if (!localStorage.getItem("salones")) {
     const salones = [
       {
         id: 1,
-        nombre: "Salón 1",
-        descripcion: "Espacio ideal para fiestas pequeñas y reuniones íntimas.",
+        nombre: "Salón Arcoiris",
+        descripcion: "Un lugar mágico para los peques",
         imagen: "assets/img/salon1.jpg"
       },
       {
