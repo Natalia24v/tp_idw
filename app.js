@@ -70,16 +70,6 @@ function borrarSalon(id) {
 /* Función para mensaje de alerta */
 const mensaje = document.getElementById("mensaje");
 
-if (mensaje) {
-  mensaje.innerHTML = `
-    <div class="alert alert-success" role="alert">
-      Salón ${id ? 'editado' : 'creado'} correctamente.
-    </div>
-  `;
-  setTimeout(() => mensaje.innerHTML = "", 3000);
-}
-
-
 
 
 const form = document.getElementById("formSalon");
@@ -107,7 +97,7 @@ const form = document.getElementById("formSalon");
     };
 
     window.editarSalon = (id) => {
-      const salon = obtenerSalones().find(s => String(s.id) === string(id));
+      const salon = obtenerSalones().find(s => String(s.id) === String(id));
       document.getElementById("salonId").value = salon.id;
       document.getElementById("nombre").value = salon.nombre;
       document.getElementById("descripcion").value = salon.descripcion;
@@ -131,7 +121,7 @@ const form = document.getElementById("formSalon");
 
       if (id) {
         // Editar
-        salones = salones.map(salon => String(salon.id) ==string(id) ? { id: salon(id), nombre, descripcion, imagen } : salon);
+        salones = salones.map(salon => String(salon.id) ===String(id) ? { id: salon.id, nombre, descripcion, imagen } : salon);
       } else {
         // Crear
         const nuevoSalon = { id: Date.now(), nombre, descripcion, imagen };
@@ -139,6 +129,14 @@ const form = document.getElementById("formSalon");
       }
 
       guardarSalones(salones);
+      if (mensaje) {
+        mensaje.innerHTML = `
+          <div class="alert alert-success" role="alert">
+            Salón ${id ? 'editado' : 'creado'} correctamente.
+          </div>
+        `;
+        setTimeout(() => mensaje.innerHTML = "", 3000);
+      }
       form.reset();
       renderTabla();
     });
