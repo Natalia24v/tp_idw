@@ -1,5 +1,13 @@
 import { inicializarSalones } from './datos.js';
 
+// Bloquear acceso si no estan logueados
+
+if (!sessionStorage.getItem("accessToken")) {
+  alert("Iniciar sesión para acceder a administración.");
+  location.href = "login.html";
+}
+
+
 // Función para inicializar LocalStorage si no existe
 function initializeLocalStorage() {
     if (!localStorage.getItem('salones')) {
