@@ -21,38 +21,41 @@
         <button type="submit" class="btn btn-primary">Ingresar</button>
     </form>
     
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const usuario = document.getElementById('usuario').value;
-            const contrasena = document.getElementById('contrasena').value;
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const usuario = document.getElementById('usuario').value;
+        const contrasena = document.getElementById('contrasena').value;
 
         fetch('https://dummyjson.com/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ usuario, contrasena })
+            body: JSON.stringify({ username: usuario, password: contrasena })
         })
-        .then(response => response.json())
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Usuario o contraseña incorrectos');
+            }
+            return res.json();
+        })
         .then(data => {
-            if (data.success) {
-                if (sessionStorage.getItem('username')) {
-                    alert('Este usuario ya está logeado');
-                } else {
-                    sessionStorage.setItem('usuario', usuario);
-                    alert('¡Ingreso exitoso!');
-                    window.location.href = './index.html';
-                }
+            if (sessionStorage.getItem('usuario')) {
+                alert('Este usuario ya está logeado');
             } else {
-                alert('Usuario o contraseña incorrectos');
+                sessionStorage.setItem('usuario', usuario);
+                sessionStorage.setItem('accessToken', data.token);
+                alert('¡Ingreso exitoso!');
+                window.location.href = './admin.html';
             }
         })
         .catch(error => {
-            console.error('Error en la solicitud:', error);
-            alert('Ocurrió un error al intentar iniciar sesión');
+            alert(error.message);
+            console.error('Error:', error);
         });
     });
-    </script>
+</script>
+
 </body>
 </html>
