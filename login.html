@@ -37,7 +37,7 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                if (sessionStorage.getItem('usuario')) {
+                if (sessionStorage.getItem('username')) {
                     alert('Este usuario ya está logeado');
                 } else {
                     sessionStorage.setItem('usuario', usuario);
