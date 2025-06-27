@@ -96,8 +96,8 @@ const form = document.getElementById("formSalon");
           <td>${salon.nombre}</td>
           <td>${salon.descripcion}</td>
           <td>
-            <button class="btn btn-sm btn-primary" onclick="editarSalon('${salon.id}')">Editar</button>
-            <button class="btn btn-sm btn-danger" onclick="eliminarSalon('${salon.id}')">Eliminar</button>
+            <button class="btn btn-sm btn-btn-outline-dark" onclick="editarSalon('${salon.id}')">Editar</button>
+            <button class="btn btn-sm btn-dark" onclick="eliminarSalon('${salon.id}')">Eliminar</button>
           </td>
         `;
         tablaBody.appendChild(fila);

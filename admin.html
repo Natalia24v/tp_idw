@@ -36,9 +36,9 @@
 </nav>-->
 
   <div class="container my-5">
-    <h1 class="text-center mb-4 text-primary">Administrar Salones</h1>
+    <h1 class="text-center mb-4" id="h1Admin">Administrar Salones</h1>
     <div class="text-end my-3">
-      <a href="usuario.html" class="btn btn-outline-primary">Ver usuarios registrados</a>
+      <a href="usuario.html" class="btn btn-outline-dark">Ver usuarios registrados</a>
     </div>
     <form id="formSalon" class="border p-4 rounded bg-light">
       <input type="hidden" id="salonId">
@@ -55,8 +55,8 @@
         <textarea id="descripcion" class="form-control" rows="3" required></textarea>
       </div>
       
-      <button type="submit" class="btn btn-success">Guardar</button>
-      <button type="reset" class="btn btn-secondary">Limpiar</button>
+      <button type="submit" class="btn" id="btn-magenta">Guardar</button>
+      <button type="reset" class="btn btn-dark" >Limpiar</button>
     </form>
 
     <!-- Mensaje de alerta-->
@@ -64,7 +64,7 @@
 
 
     <hr class="my-5">
-    <h2 class="text-center text-danger">Salones existentes</h2>
+    <h2 class="text-center ">Salones existentes</h2>
     <table class="table table-striped mt-4" id="tablaSalones">
       <thead>
         <tr>
