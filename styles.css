@@ -1,250 +1,347 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: rgb(248, 244, 158); 
-    background-image: url("assets/img/fondo2.jpg");
-    background-size: cover;         /* Hace que la imagen cubra toda la pantalla */
-    background-position: center;    /* Centra la imagen */
-    background-repeat: no-repeat;   /* Evita que se repita */
-    font-family: sans-serif;
-    font-size: 16px;
-    overflow: scroll;
-  }
-  
-  .logo {
-    width: 150px;
-    height: auto;
-  }
+body {
+  background-color: rgb(248, 244, 158); 
+  background-image: url("assets/img/fondo2.jpg");
+  background-size: cover;         /* Hace que la imagen cubra toda la pantalla */
+  background-position: center;    /* Centra la imagen */
+  background-repeat: no-repeat;   /* Evita que se repita */
+  font-family: sans-serif;
+  font-size: 16px;
+  overflow: scroll;
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between; /* logo a la izq, nav a la der */
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
+.logo {
+  width: 150px;
+  height: auto;
+}
 
-  
-  .imgContent {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; 
-    padding: 0px 50px;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo a la izq, nav a la der */
+  align-items: center;
+  padding: 10px 20px;
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
 
-  h1 {
-    color: rgb(43, 117, 255);
-    padding: 20px;
-    text-align: center;
-    font-size: 2.5rem;
-  }
-  h2 {
-    color: orangered;
-    padding: 50px;
-    font-size: 1.8rem;
-  }
-  p {
-    column-count: 2;
-    text-align: justify;
-    width: 80%;
-    margin: 40px auto;
-    font-size: 25PX;
-    line-height: 1.6;
-    color: black;
-  }
-  .formulario { 
-    border-radius: 15px;
-  }
-  
-  input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid;
-    font-size: 16px;
-    background-color: #fff;
-  }
-  header nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-    background-color: rgba(255, 255, 255, 0.767);
-    padding: 10px 0;
-    border-radius: 12px;
-    margin: 20px auto;
-    max-width: 800px;
-  }
-  header nav ul li{
-    margin: 0 15px;
-  }
-  header nav ul li a{
-    text-decoration: none;
-    color: rgb(255, 2, 108);
-    font-weight: bold;
-    font-size: 18px;
-  }
-  header nav ul li a:hover {
-    color: rgb(43, 117, 255);
-    text-decoration: underline;
-  }
-  main{
-  max-width: 1000px;
+
+.imgContent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  padding: 0px 50px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+h1 {
+  color: rgb(43, 117, 255);
+  padding: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+h2 {
+  color: orangered;
+  padding: 50px;
+  font-size: 1.8rem;
+}
+p {
+  column-count: 2;
+  text-align: justify;
+  width: 80%;
   margin: 40px auto;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  main section {
-    margin-bottom: 40px;
-  }
-  main h2{
-    color:orangered;
-    font-size: 28px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid rgba(255, 2, 108, 0.3);
-    padding-bottom: 5px;
-  }
-  main p, main li{
-  font-size: 20px;
-  color: #333;
+  font-size: 25PX;
   line-height: 1.6;
-  }
-  main ul {
-    padding-left: 110px;
-  }
-  main ul li {
-    list-style-type: disc;
-    margin-bottom: 10px;
-  }
-  .card-text {
-    column-count: 1;
-  }
-  footer {
-    color:#fff;
-    background-color: #6b21a8;
-  }
-  footer a {
-    color:#fff;
-    text-decoration: none;
-  }
-  footer a:hover {
-    color:#33918c;
-    text-decoration: underline;
-  }
-  footer p {
-    column-count: 1;
-    color:#fff;
-    font-size: 1rem;
-  }
+  color: black;
+}
+.formulario { 
+  border-radius: 15px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid;
+  font-size: 16px;
+  background-color: #fff;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.767);
+  padding: 10px 0;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+header nav ul li{
+  margin: 0 15px;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: rgb(255, 2, 108);
+  font-weight: bold;
+  font-size: 18px;
+}
+header nav ul li a:hover {
+  color: rgb(43, 117, 255);
+  text-decoration: underline;
+}
+main{
+max-width: 1000px;
+margin: 40px auto;
+background-color: rgba(255, 255, 255, 0.9);
+padding: 40px;
+border-radius: 15px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+main section {
+  margin-bottom: 40px;
+}
+main h2{
+  color:orangered;
+  font-size: 28px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 2, 108, 0.3);
+  padding-bottom: 5px;
+}
+main p, main li{
+font-size: 20px;
+color: #333;
+line-height: 1.6;
+}
+main ul {
+  padding-left: 110px;
+}
+main ul li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+.card-text {
+  column-count: 1;
+}
+footer {
+  color:#fff;
+  background-color: #6b21a8;
+}
+footer a {
+  color:#fff;
+  text-decoration: none;
+}
+footer a:hover {
+  color:#33918c;
+  text-decoration: underline;
+}
+footer p {
+  column-count: 1;
+  color:#fff;
+  font-size: 1rem;
+}
 
 .custom-navbar {
-  background-color: #6B21A8; 
+background-color: #6B21A8; 
 }
 
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link {
-  color: white; 
-  font-size: 24px;
-  font-weight: bold;
+color: white; 
+font-size: 24px;
+font-weight: bold;
+}
+
+#h1Admin{
+color: #e91e63;
+text-decoration: dotted #030303;
+font-size: 3.5rem;
+}
+
+#btn-magenta {
+color: #fff; 
+background-color: #e91e63; 
+border-color: #e91e63;
+}
+
+#tablaSalones {
+width: 100%;
+border-collapse: separate; /* Permite espacio entre los bordes de las celdas */
+border-spacing: 0 1rem; /* Espacio vertical entre cada fila */
+}
+
+/* --- Estilos para el encabezado de la tabla (<thead>) --- */
+#tablaSalones thead th {
+background-color: #e91e63; 
+color: #ffff;
+text-transform: uppercase;
+font-weight: 600;
+padding: 1rem 1.5rem;
+border-bottom: 2px solid #ced4da;
+text-align: left;
+
+}
+
+/* --- Estilos para cada fila del cuerpo de la tabla (<tbody><tr>) --- */
+#tablaSalones tbody tr {
+border-radius: 12px; 
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto al pasar el mouse por encima de la fila */
+#tablaSalones tbody tr:hover {
+transform: translateY(-5px); /* Eleva la tarjeta ligeramente */
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+cursor: pointer;
+}
+
+/* --- Estilos para las celdas (<td>) de la tabla --- */
+#tablaSalones tbody td {
+padding: 1.5rem;
+vertical-align: middle; /* Alinea el contenido verticalmente al centro */
+border: none;
+}
+
+/* --- Estilo para la primera celda que contiene la imagen --- */
+#tablaSalones tbody td:first-child {
+width: 25%;
+padding-left: 2rem;
+}
+
+/* --- Estilo para la segunda celda que contiene el nombre/título --- */
+#tablaSalones tbody td:nth-child(2) {
+width: 25%;
+font-weight: bold;
+font-size: 1.5rem;
+color: #e91e63;
+}
+
+/* --- Estilo para la tercera celda --- */
+#tablaSalones tbody td:nth-child(3) {
+width: 45%;
+color: #030303;
+}
+
+/* --- Estilo para la celda que contiene los botones  --- */
+#tablaSalones tbody td:last-child {
+width: 15%;
+text-align: center;
+padding-right: 2rem;
+}
+
+/* --- Estilos para las imágenes --- */
+#tablaSalones tbody img {
+height: 100px; 
+object-fit: cover; 
+border-radius: 10px;
+border: 3px solid #dbd6db; 
+}
+
+/* --- Estilos para los botones --- */
+#tablaSalones .btn {
+border-radius: 50px; /* Borde de píldora */
+font-weight: 600;
+text-transform: uppercase;
+font-size: 0.9rem;
+padding: 0.5rem 1.2rem;
+margin-left: 0.5rem; /* Espacio entre los botones */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Media Queries para pantallas medianas (tablets y laptops pequeñas) --- */
 @media (min-width: 768px) { 
-  h1 {
-      font-size: 3rem; 
-  }
-  h2 {
-      padding: 30px;
-      font-size: 2rem; 
-  }
-  p {
-      width: 85%; 
-      margin: 30px auto;
-      font-size: 1.2rem; 
-  }
+h1 {
+    font-size: 3rem; 
+}
+h2 {
+    padding: 30px;
+    font-size: 2rem; 
+}
+p {
+    width: 85%; 
+    margin: 30px auto;
+    font-size: 1.2rem; 
+}
 
-  main {
-      margin: 30px auto;
-      padding: 30px;
-  }
-  main h2 {
-      font-size: 2rem; 
-      margin-bottom: 15px;
-  }
-  main p, main li {
-      font-size: 1.2rem;
-  }
-  main ul {
-      padding-left: 60px; 
-  }
+main {
+    margin: 30px auto;
+    padding: 30px;
+}
+main h2 {
+    font-size: 2rem; 
+    margin-bottom: 15px;
+}
+main p, main li {
+    font-size: 1.2rem;
+}
+main ul {
+    padding-left: 60px; 
+}
 }
 
 
 /* --- Media Queries para pantallas grandes (desktops, laptops grandes) --- */
 @media (min-width: 992px) { 
-  h1 {
-      font-size: 3.5rem; 
-  }
-  h2 {
-      padding: 40px;
-      font-size: 2.2rem;
-  }
-  p {
-      column-count: 2; 
-      text-align: justify; 
-      width: 80%;
-      margin: 40px auto;
-      font-size: 1.3rem; 
-  }
+h1 {
+    font-size: 3.5rem; 
+}
+h2 {
+    padding: 40px;
+    font-size: 2.2rem;
+}
+p {
+    column-count: 2; 
+    text-align: justify; 
+    width: 80%;
+    margin: 40px auto;
+    font-size: 1.3rem; 
+}
 
-  main {
-      margin: 40px auto;
-      padding: 40px;
-  }
-  main h2 {
-      font-size: 2.2rem;
-  }
-  main p, main li {
-      font-size: 1.3rem;
-  }
-  main ul {
-      padding-left: 110px; /* Volver al padding original para listas */
-  }
+main {
+    margin: 40px auto;
+    padding: 40px;
+}
+main h2 {
+    font-size: 2.2rem;
+}
+main p, main li {
+    font-size: 1.3rem;
+}
+main ul {
+    padding-left: 110px; /* Volver al padding original para listas */
+}
 }
 
 /* --- Media Query para pantallas muy grandes (4K y superiores) --- */
 @media (min-width: 1920px) { 
-  h1 {
-      font-size: 4.5rem;
-      padding: 30px;
-  }
-  h2 {
-      font-size: 3rem;
-      padding: 60px;
-  }
-  p {
-      font-size: 1.8rem; 
-      line-height: 1.8; 
-  }
+h1 {
+    font-size: 4.5rem;
+    padding: 30px;
+}
+h2 {
+    font-size: 3rem;
+    padding: 60px;
+}
+p {
+    font-size: 1.8rem; 
+    line-height: 1.8; 
+}
 
-  main p, main li {
-      font-size: 1.5rem; 
-  }
+main p, main li {
+    font-size: 1.5rem; 
+}
 }
 
 .ayuda {
-  column-count: 1;
+column-count: 1;
 }
